@@ -1,8 +1,8 @@
 // Time Complexity
 // Worst Case O(n^2)
 // Average Case θ(n^2)
-// Best Case Ω(n)
-
+// Best Case Ω(n^2)
+Ωθ
 // Space Complexity O(1)
 
 #include<bits/stdc++.h>
@@ -18,15 +18,15 @@ void file_i_o() {
   #endif
 }
 
-void BubbleSort(vector<int>&arrayInt) {
+void selectionSort(vector<int>&arrayInt) {
 	for(int i=0; i<arrayInt.size()-1; i++) {
-		for(int j=0; j<arrayInt.size()-i-1; j++) {
-			if(arrayInt[j] > arrayInt[j+1]) {
-				int temp = arrayInt[j];
-				arrayInt[j] = arrayInt[j+1];
-				arrayInt[j+1] = temp;
-			}
-		}
+		int l = i;
+		
+		for(int j=i+1; j<arrayInt.size(); j++) 
+			if(arrayInt[j] < arrayInt[l]) 
+				l = j;
+
+		swap(arrayInt[l], arrayInt[i]);
 	}
 }
 
@@ -35,17 +35,17 @@ void printArray(vector<int>arrayInt) {
 		cout<<arrayInt[i]<<" ";
 }
 
+
 int main(int argc, char** argv) {   
   file_i_o();
   //write your code here Als
-  int size;
-  cin>>size;
- 
-  vector<int>arrayInt(size);
-  for(int i=0; i<size; i++) 
-  	cin>>arrayInt[i];
+ 	int size;
+ 	cin>>size;
+ 	vector<int>arrayInt(size);
+ 	for(int i=0; i<size; i++)
+ 		cin>>arrayInt[i];
 
-  BubbleSort(arrayInt);
-  printArray(arrayInt);
+ 	selectionSort(arrayInt);
+ 	printArray(arrayInt); 
   return 0;
 }

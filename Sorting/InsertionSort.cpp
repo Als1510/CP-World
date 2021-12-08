@@ -1,7 +1,7 @@
 // Time Complexity
 // Worst Case O(n^2)
-// Average Case θ(n^2)
-// Best Case Ω(n)
+// Average Case O(n^2)
+// Best Case O(n)
 
 // Space Complexity O(1)
 
@@ -18,20 +18,20 @@ void file_i_o() {
   #endif
 }
 
-void BubbleSort(vector<int>&arrayInt) {
-	for(int i=0; i<arrayInt.size()-1; i++) {
-		for(int j=0; j<arrayInt.size()-i-1; j++) {
-			if(arrayInt[j] > arrayInt[j+1]) {
-				int temp = arrayInt[j];
-				arrayInt[j] = arrayInt[j+1];
-				arrayInt[j+1] = temp;
-			}
+void InsertionSort(vector<int>&arrayInt) {
+	for(int i=1; i<arrayInt.size(); i++) {
+		int temp = arrayInt[i];
+		int j = i-1;
+		while(j>=0 && arrayInt[j]>temp) {
+			arrayInt[j+1] = arrayInt[j];
+			j--;
 		}
+		arrayInt[j+1] = temp;
 	}
 }
 
 void printArray(vector<int>arrayInt) {
-	for(int i=0; i<arrayInt.size(); i++)
+	for(int i=0; i<arrayInt.size(); i++) 
 		cout<<arrayInt[i]<<" ";
 }
 
@@ -40,12 +40,11 @@ int main(int argc, char** argv) {
   //write your code here Als
   int size;
   cin>>size;
- 
   vector<int>arrayInt(size);
   for(int i=0; i<size; i++) 
   	cin>>arrayInt[i];
 
-  BubbleSort(arrayInt);
+  InsertionSort(arrayInt);
   printArray(arrayInt);
   return 0;
 }
