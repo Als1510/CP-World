@@ -1,3 +1,10 @@
+// Time Complexity
+// Worst Case - O(n^2)
+// Average Case - O(n*log n)
+// Best Case - O(n*log n)
+
+// Space Complexity - O(log n)
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -37,8 +44,9 @@ void printArray(vector<int>arrayInt) {
     cout<<arrayInt[i]<<" ";
 }
 
-int main() {
+int main(int argc, char** argv) {   
   file_i_o();
+  //write your code here Als
   int size;
   cin>>size;
   vector<int>arrayInt(size);
