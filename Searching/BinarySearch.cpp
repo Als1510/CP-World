@@ -2,6 +2,12 @@
 // Iterative
 // Recursive => Divide & Conquer
 
+// Time complexity 
+// Worst Case Θ(log n)
+// Average Case Θ(log n)
+// Best Case O(1)
+// Space complexity O(1)
+
 #include<bits/stdc++.h>
 using namespace std;
 
