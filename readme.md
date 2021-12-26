@@ -37,3 +37,4 @@ nul > Output.txt
   - [Linear Search](/Searching/LinearSearch.cpp)
   - [Binary Search](/Searching/BinarySearch.cpp)
   - [Breadth First Search (BFS)](/Searching/BreadthFirstSearch.cpp)
+  - [Depth First Search (DFS)](/Searching/DepthFirstSearch.cpp)
